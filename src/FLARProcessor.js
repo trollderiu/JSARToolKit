@@ -120,7 +120,7 @@ FLSingleARMarkerProcesser = ASKlass('FLSingleARMarkerProcesser',
     this._detectmarker_cb.init(i_raster,this._current_arcode_index);
     this._square_detect.detectMarkerCB(this._bin_raster,this._detectmarker_cb);
     // 認識状態を更新
-    var is_id_found=updateStatus(this._detectmarker_cb.square,this._detectmarker_cb.code_index);
+    var is_id_found=this.updateStatus(this._detectmarker_cb.square,this._detectmarker_cb.code_index);
     //閾値フィードバック(detectExistMarkerにもあるよ)
     if(!is_id_found){
       //マーカがなければ、探索+DualPTailで基準輝度検索
