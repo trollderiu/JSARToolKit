@@ -408,7 +408,7 @@ FLSingleNyIdMarkerProcesser = ASKlass('FLSingleNyIdMarkerProcesser',
     this._callback.init(i_raster,this._is_active?this._data_current:null);
     this._square_detect.detectMarkerCB(this._bin_raster, this._callback);
     // 認識状態を更新(マーカを発見したなら、current_dataを渡すかんじ)
-    var is_id_found=updateStatus(this._callback.square,this._callback.marker_data);
+    var is_id_found=this.updateStatus(this._callback.square,this._callback.marker_data);
     //閾値フィードバック(detectExistMarkerにもあるよ)
     if(is_id_found){
       //マーカがあれば、マーカの周辺閾値を反映
